@@ -104,11 +104,10 @@
 
     --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
     --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.15);
-    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.2);
+    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 0%, 0.15);
+    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 60%, 0.2);
     --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-url-box-shadow-color: 0px 1px 0 0px hsla(0, 0%, 100%, 0.1),
-      inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
+    --firefoxcss-url-box-shadow-color: var(--firefoxcss-noraml-tabs-box-shadow);
     --firefoxcss-url-autocomplete-highlight: hsl(240, 2%, 26%);
     --firefoxcss-url-breakout-box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
       rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
@@ -585,8 +584,6 @@ about:config -> svg.context-properties.content.enabled -> true*/
 
 /* Dropdown search box colors */
 #urlbar[breakout][breakout-extend][open] #urlbar-background {
-  border-bottom: var(--firefoxcss-url-breakout-border-bottom-color) !important;
-  border-top: var(--firefoxcss-url-breakout-border-top-color) !important;
   box-shadow: var(--firefoxcss-url-breakout-box-shadow) !important;
 }
 
@@ -630,6 +627,7 @@ about:config -> svg.context-properties.content.enabled -> true*/
     padding-block: 1px !important;
     padding-inline: 1px !important;
     transition: none !important;
+  border-bottom: none !important;
   }
 }
 
