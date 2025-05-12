@@ -53,16 +53,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Main dark color, url bar, active tab etc. */
-    --firefoxcss-main-bg-color: hsl(240, 2%, 13%);
+    --firefoxcss-main-bg-color: hsl(240, 4%, 16%);
 
     /* Main lighter color, toolbar background */
-    --firefoxcss-item-bg-color: hsl(240, 2%, 20%);
+    --firefoxcss-item-bg-color: hsl(240, 3%, 12%);
 
     /* Tab colors */
-    --firefoxcss-tab-bg-color: hsl(240, 2%, 26%);
-    --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 32%);
-    --firefoxcss-tab-active-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-tab-bg-color: var(--firefoxcss-main-bg-color);
+    --firefoxcss-tab-hover-bg-color: hsl(240, 2%, 22%);
+    --firefoxcss-tab-active-bg-color: hsl(240, 3%, 22%);
     --firefoxcss-non-active-tabs: hsla(0, 0%, 100%, 0.65);
+    --firefoxcss-tab-border-bottom-color: 1px solid hsla(0, 0%, 0%, 0.15);
+    --firefoxcss-tab-border-top-color: 1px solid hsla(0, 0%, 100%, 0.2);
 
     --firefoxcss-normal-tabs-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.4);
     --firefoxcss-tab-multiselect-outline: rgba(255, 255, 255, 0.1);
@@ -102,8 +104,8 @@
 
     --firefoxcss-url-breakout-border-top-color: 1px solid transparent;
     --firefoxcss-url-bar-bg-color: var(--firefoxcss-main-bg-color);
-    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.2);
-    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.15);
+    --firefoxcss-url-border-bottom-color: 1px solid hsla(0, 0%, 100%, 0.15);
+    --firefoxcss-url-border-top-color: 1px solid hsla(0, 0%, 0%, 0.2);
     --firefoxcss-url-breakout-bar-bg-color: var(--firefoxcss-main-bg-color);
     --firefoxcss-url-box-shadow-color: 0px 1px 0 0px hsla(0, 0%, 100%, 0.1),
       inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25) !important;
@@ -544,6 +546,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
 #urlbar .urlbar-input-container,
 #searchbar {
   border-radius: var(--firefoxcss-border-radius) !important;
+  border-bottom: var(--firefoxcss-url-border-bottom-color) !important;
+  border-top: var(--firefoxcss-url-border-top-color) !important;
 }
 
 /* Center search box text  */
@@ -674,6 +678,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-bg-color) !important;
+  border-bottom: var(--firefoxcss-tab-border-bottom-color) !important;
+  border-top: var(--firefoxcss-tab-border-top-color) !important;
   transition: background-color 100ms ease !important;
   box-shadow: var(--firefoxcss-normal-tabs-box-shadow) !important;
 }
@@ -699,6 +705,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-hover-bg-color) !important;
+  border-bottom: var(--firefoxcss-tab-border-bottom-color) !important;
+  border-top: var(--firefoxcss-tab-border-top-color) !important;
   box-shadow: var(--firefoxcss-normal-tabs-box-shadow) !important;
 }
 
@@ -708,6 +716,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   border-radius: var(--firefoxcss-border-radius) !important;
   background-image: none !important;
   background-color: var(--firefoxcss-tab-active-bg-color) !important;
+  border-bottom: var(--firefoxcss-tab-border-bottom-color) !important;
+  border-top: var(--firefoxcss-tab-border-top-color) !important;
   box-shadow: none !important;
   outline: none !important;
 }
@@ -719,6 +729,8 @@ about:config -> svg.context-properties.content.enabled -> true*/
   background-image: none !important;
   outline: none !important;
   background-color: var(--firefoxcss-tab-active-bg-color) !important;
+  border-bottom: var(--firefoxcss-tab-border-bottom-color) !important;
+  border-top: var(--firefoxcss-tab-border-top-color) !important;
   box-shadow: none !important;
 }
 
